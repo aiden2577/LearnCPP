@@ -6,6 +6,7 @@ using namespace std;
 void sort(int arr[],int size)
 {
 	int tmp =0;
+	bool flag = false;
 	for (int i = 0; i < size-1; i++)
 	{
 		//wanMing modify sort algorithm,Sort from largest to smallest
@@ -16,9 +17,13 @@ void sort(int arr[],int size)
 				tmp = arr[j];
 				arr[j] = arr[j+1];
 				arr[j+1] = tmp;
+				flag=true;
 			}
 		}
+	if(!flag)
+		break;
 	}
+	
 	
 	
 }
